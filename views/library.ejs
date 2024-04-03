@@ -1,0 +1,19 @@
+<%- include("./partials/header") %>
+  
+    <h1>Book Store Library</h1>
+
+    <% books.forEach((book, idx)=>{ %>
+        <p><%= book.name %></p>
+        <p><%= book.author %></p>
+        <p><%= book.price %></p>
+        <p><%= book.category %></p>
+        <p><%= book.discribtion %></p>
+        <a href="/delete/<%= idx %>">Delete</a>
+        <a href="/update/<%= idx %>">Update</a>
+        <hr>
+    <% }) %>
+    
+
+    
+
+<%- include("./partials/footer") %>
