@@ -1,0 +1,20 @@
+<%- include("./partials/header") %>
+  
+    <h1 class="text-center mb-5" style="width: 100;">Book Store Update Entry</h1>
+
+    <form action="/update/<%= index %>" method="post" style="background-color: rgb(166, 166, 166); margin: 30px; padding: 20px;;">
+
+        <input type="text" placeholder="Book Name" name="name" value="<%= book.name %>" class="p-1" style="width: 100%;">
+        <br><br>
+        <input type="text" placeholder="Author name" name="author" value="<%= book.author %>" class="p-1" style="width: 100%;">
+        <br><br>
+        <input type="text" placeholder="Book Price" name="price" value="<%= book.price%>" class="p-1" style="width: 100%;">
+        <br><br>
+        <input type="text" placeholder="category" name="category" value="<%= book.category %>" class="p-1" style="width: 100%;">
+        <br><br>
+        <textarea placeholder="enter text here..." name="discribtion"  cols="30" rows="10" class="p-1" style="width: 100%;"> <%= book.discribtion %></textarea>
+        <br>
+        <button>Update book</button>
+    </form>
+
+<%- include("./partials/footer") %>

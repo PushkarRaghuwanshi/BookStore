@@ -1,17 +1,19 @@
 <%- include("./partials/header") %>
   
-    <h1>Book Store Library</h1>
+    <h1 class="text-center p-3">Book Store Library</h1>
 
-    <% books.forEach((book, idx)=>{ %>
-        <p><%= book.name %></p>
-        <p><%= book.author %></p>
-        <p><%= book.price %></p>
-        <p><%= book.category %></p>
-        <p><%= book.discribtion %></p>
-        <a href="/delete/<%= idx %>">Delete</a>
-        <a href="/update/<%= idx %>">Update</a>
-        <hr>
-    <% }) %>
+    <div class="p-4 bg-body-secondary">
+        <% books.forEach((book, idx)=>{ %>
+            <p><%= book.name %></p>
+            <p><%= book.author %></p>
+            <p><%= book.price %></p>
+            <p><%= book.category %></p>
+            <p><%= book.discribtion %></p>
+            <a href="/delete/<%= idx %>">Delete</a>
+            <a href="/update/<%= idx %>">Update</a>
+            <hr>
+        <% }) %>
+    </div>
     
 
     
